@@ -31,13 +31,10 @@ def do_deploy(archive_path):
     """
     deploy archive to server
     """
-    
     if not archive_path or not os.path.exists(archive_path):
         return False
 
     put(archive_path, '/tmp')
-
-    ar_name = archive_path[archive_path.find("/") + 1: -4]
     
     try:
         if not os.path.exists(archive_path):
