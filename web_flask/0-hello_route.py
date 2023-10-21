@@ -1,5 +1,7 @@
-from flask import Flask
+#!/usr/bin/python3
 """Hello HBNB"""
+
+from flask import Flask
 
 app = Flask(__name__)
 
