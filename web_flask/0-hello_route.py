@@ -9,8 +9,8 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def index():
-    """Hello HBNB """
-    return "Hello HBNB"
+    """simple server test"""
+    return "Hello HBNB!"
 
 
 if __name__ == "__main__":
