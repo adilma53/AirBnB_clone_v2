@@ -27,12 +27,5 @@ def c(text):
     return f'C {joined}'
 
 
-@app.route("/number/<n>", strict_slashes=False)
-def python(n):
-    """simple server test returns HBNB"""
-    if isinstance(n, int):
-        return f'{n} is a numbe'
-
-
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
