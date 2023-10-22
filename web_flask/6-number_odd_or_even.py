@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/python3
 """Hello HBNB"""
 
@@ -28,6 +26,7 @@ def c(text):
     joined = ' '.join(noUnderScore)
     return f'C {joined}'
 
+
 @app.route("/number_template/<int:n>", strict_slashes=False)
 def num_tamplate(n):
     """number route with template"""
@@ -38,7 +37,7 @@ def num_tamplate(n):
 def evenOrOdd(n):
     """number route with template"""
     isEven = 'even' if (n % 2) == 0 else 'odd'
-    return render_template('6-number_odd_or_even.html', n=n,isEven=isEven)
+    return render_template('6-number_odd_or_even.html', n=n, isEven=isEven)
 
 
 if __name__ == "__main__":
