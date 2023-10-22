@@ -19,7 +19,7 @@ def listStates():
 
 
 @app.teardown_appcontext
-def tear_db(exeption):
+def tear_db(exception):
     """close engine"""
     return storage.close()
 
