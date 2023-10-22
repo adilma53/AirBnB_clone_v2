@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Hello HBNB"""
+"""python_route"""
 
 
 from flask import Flask
@@ -29,7 +29,7 @@ def c(text):
 
 @app.route("/python/<text>", strict_slashes=False)
 def python(text):
-    """simple server test returns HBNB"""
+    """python_route"""
     noUnderScore = text.split('_')
     joined = ' '.join(noUnderScore)
     return f'Python {joined}'
