@@ -21,15 +21,16 @@ def hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def c(text):
-    """simple server test returns HBNB"""
+    """c route"""
     noUnderScore = text.split('_')
     joined = ' '.join(noUnderScore)
     return f'C {joined}'
 
 
+@app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
-def python(text):
-    """python_route"""
+def python(text="is cool"):
+    """python route"""
     noUnderScore = text.split('_')
     joined = ' '.join(noUnderScore)
     return f'Python {joined}'

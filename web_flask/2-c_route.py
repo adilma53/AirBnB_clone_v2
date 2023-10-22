@@ -21,19 +21,10 @@ def hbnb():
 
 @app.route('/c/<text>', strict_slashes=False)
 def c(text):
-    """simple server test returns HBNB"""
+    """c route"""
     noUnderScore = text.split('_')
     joined = ' '.join(noUnderScore)
     return f'C {joined}'
-
-
-@app.route("/python/<text>", strict_slashes=False)
-def python(text):
-    """python route"""
-    noUnderScore = text.split('_')
-    joined = ' '.join(noUnderScore)
-    return f'Python {joined}'
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
