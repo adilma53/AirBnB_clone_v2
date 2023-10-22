@@ -27,12 +27,12 @@ def c(text):
     return f'C {joined}'
 
 
-@app.route("/number/<n>", strict_slashes=False)
-def python(n):
+@app.route("/python/<text>", strict_slashes=False)
+def python(text):
     """simple server test returns HBNB"""
-    if(type(n) is int):
-        return f'{n} is a numbe'
-
+    noUnderScore = text.split('_')
+    joined = ' '.join(noUnderScore)
+    return f'Python {joined}'
 
 
 if __name__ == "__main__":
