@@ -4,7 +4,7 @@
 """Hello HBNB"""
 
 
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -29,12 +29,10 @@ def c(text):
     return f'C {joined}'
 
 
-@app.route("/number/<n>", strict_slashes=False)
-def python(n):
-    """simple server test returns HBNB"""
-    if isinstance(n, int):
-        return f'{n} is a numbe'
-
+@app.route("/number_template/<int:n>", strict_slashes=False)
+def num_tamplate(n):
+    """number route with template"""
+    return render_template('5-number.html', n=n)
 
 
 if __name__ == "__main__":
